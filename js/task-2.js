@@ -1,4 +1,21 @@
+class Storage {
+    #items;
+    constructor(items) {
+        this.#items = items;
+    }
+    
+    getItems() {
+        return this.#items;
+    }
 
+    addItem(newItems) {
+        this.#items.push(newItems);
+    }
+
+    removeItem(itemToRemove) {
+        this.#items = this.#items.filter(item => item !== itemToRemove);
+    }
+}
 
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
